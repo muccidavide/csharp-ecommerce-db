@@ -12,8 +12,8 @@ using csharp_ecommerce_db;
 namespace csharp_ecommerce_db.Migrations
 {
     [DbContext(typeof(ECommerceContext))]
-    [Migration("20220930130849_InitialCreate")]
-    partial class InitialCreate
+    [Migration("20220930134028_Initial")]
+    partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -140,9 +140,8 @@ namespace csharp_ecommerce_db.Migrations
                     b.Property<int>("CostumerId")
                         .HasColumnType("int");
 
-                    b.Property<string>("Date")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<DateTime>("Date")
+                        .HasColumnType("datetime2");
 
                     b.Property<int>("EmployeeId")
                         .HasColumnType("int");
