@@ -12,6 +12,6 @@ namespace csharp_ecommerce_db
         public string Name { get; set; }
         public string Surname { get; set; }     
         public string Email { get; set; }
-        public List<Costumer> costumers { get; set; }
+        public List<Order> Orders { get; set; }
     }
 }
